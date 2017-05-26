@@ -42,6 +42,6 @@ app.use('/', loginRouter);
 app.use('/', artistsRouter(io));
 
 // Start Server
-server.listen(3000);
+server.listen(8000);
 
 module.exports = app;
