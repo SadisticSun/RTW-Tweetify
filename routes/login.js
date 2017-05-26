@@ -96,7 +96,7 @@ const dbconfig = {
                     })
                 }
             })
-        }, 1500)
+        }, 500)
     },
 
     getUserInfo: function () {
@@ -186,7 +186,7 @@ Router.get('/login', (req, res) => {
                     artist_data: artist_data,
                     last_song: last_played
                 });
-            }, 2000);
+            }, 900);
 
         }
     });
