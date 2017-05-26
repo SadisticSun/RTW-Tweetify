@@ -18,16 +18,12 @@ var artist_data = {};
 var last_played = {};
 var access_token ='';
 
-// Base Request URL
-const base_URL = 'https://accounts.spotify.com/authorize?';
-var request_url = base_URL + '?client_id=' + client_id + '&scope=' + scope + '&response_type=code&redirect_uri=' + redirect_uri;
-
 // Access Token POST request options
 var authOptions = {
     url: 'https://accounts.spotify.com/api/token',
     form: {
         client_id: client_id,
-        code: 'code',
+        code: '',
         redirect_uri: redirect_uri,
         grant_type: 'authorization_code'
     },

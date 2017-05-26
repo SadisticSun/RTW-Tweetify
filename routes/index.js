@@ -8,7 +8,7 @@ const scope = 'user-top-read user-read-private user-read-currently-playing user-
 
 // Base Request URL
 const base_URL = 'https://accounts.spotify.com/authorize/';
-var request_url = base_URL + '?client_id=' + client_id + '&scope=' + scope + '&response_type=code&redirect_uri=' + redirect_uri;
+var request_url = base_URL + '?client_id=' + client_id + '&scope=' + scope + '&response_type=code&redirect_uri=' + redirect_uri + "&show_dialog=true";
 console.log(request_url);
 
 Router.get('/', function(req, res) {
