@@ -10,6 +10,7 @@ const server                      = require('http').createServer(app);
 const io                          = require('socket.io')(server);
 const mongoose                    = require('mongoose');
 const dotenv                      = require('dotenv').config();
+var port                          = process.env.PORT || 8080;
 
 // import models
 const User                        = require('./models/user.js');
@@ -42,6 +43,6 @@ app.use('/', loginRouter);
 app.use('/', artistsRouter(io));
 
 // Start Server
-server.listen(8000);
+server.listen(port);
 
 module.exports = app;
