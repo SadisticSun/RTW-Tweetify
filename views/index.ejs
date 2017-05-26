@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/offline.css' />
+    <link rel='stylesheet' href='/stylesheets/offline-language-english.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <main class="intro">
+    <div class="container">
+    <h1><%= title %></h1>
+    <h2>Welcome to Tweetify</h2>
+    <p>With Tweetify you can see what people are tweeting about your favorite artists.</p>
+    <p>To get started, click the login button below. You will be asked for your permission to let the app access some of your personal data.</p>
+    <a class="login-btn" href="<%= request_url %>">Login with Spotify</a>
+    </div>
+  </main>
+
+  <script type="text/javascript" src="/javascripts/offline.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel='stylesheet' href='/stylesheets/offline.css' />
+    <link rel='stylesheet' href='/stylesheets/offline-language-english.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <header>
+        <h1>Welcome</h1>
+        <h3><%= user_data.display_name %></h3>
+    </header>
+
+    <main>
+        <div class="now-playing">
+            <p>Recently Played: '
+                <%= last_song.item.album.artists[0].name %> -
+                    <%= last_song.item.name %>'
+            </p>
+        </div>
+        <% if (artist_data) { %>
+        <div class="fav-artists">
+            <h2>Your favorite artists:</h2>
+            <ol class="artist-list">
+                <% artist_data.items.forEach(function(item) { %>
+                    <li class="fav-artist">
+                        <h3><a href="/artist/<%= item.name %>"><%= item.name %></a></h3>
+                        <img class="album-art" src="<%= item.images[1].url %>">
+                    </li>
+                    <% }) %>
+            </ol>
+        </div>
+        <% } %>
+
+
+
+    </main>
+    <script src="/javascripts/socket.io.js"></script>
+    <script type="text/javascript" src="/javascripts/offline.js"></script>
+
+    <script type="text/javascript" src="/javascripts/main.js"></script>
+</body>
+
+</html>
