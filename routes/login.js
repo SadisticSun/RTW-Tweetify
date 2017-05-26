@@ -9,7 +9,7 @@ const User = require('../models/user.js');
 // Spotify information
 const client_id = '1eea3c72369f45a8908bc3d243d8acef';
 const client_secret = '732dd6b4f0a64bfb8c07a25838ed4b7b';
-const redirect_uri = 'http://localhost:3000/login';
+const redirect_uri = 'https://rtw-tweetify.herokuapp.com/login';
 const scope = 'user-top-read user-read-private user-read-currently-playing user-read-playback-state';
 
 
