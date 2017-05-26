@@ -7,10 +7,11 @@ const dotenv = require('dotenv').config();
 const User = require('../models/user.js');
 
 // Spotify information
-const client_id = process.env.CLIENT_ID;
-const client_secret = process.env.CLIENT_SECRET;
-const redirect_uri = process.env.REDIRECT_URI;
+const client_id = '1eea3c72369f45a8908bc3d243d8acef';
+const client_secret = '732dd6b4f0a64bfb8c07a25838ed4b7b';
+const redirect_uri = 'https://rtw-tweetify.herokuapp.com/login';
 const scope = 'user-top-read user-read-private user-read-currently-playing user-read-playback-state';
+
 
 var user_info = {};
 var artist_data = {};

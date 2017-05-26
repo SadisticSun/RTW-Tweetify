@@ -33,7 +33,8 @@ var USERS = [];
 
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO);
+const mongoServer = 'mongodb://SadisticSun:inzichtenEN123@ds151631.mlab.com:51631/rtw'
+mongoose.connect(mongoServer);
 
 // Routes
 app.use('', indexRouter);
